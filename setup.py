@@ -7,7 +7,7 @@ with open(os.path.join(here, 'README.md')) as f:
     README = f.read()
 
 
-setup(name='objectproxy',
+setup(name='object-proxy',
       version='0.1a',
       description='A minimalistic yet powerful object proxying utility',
       long_description=README + '\n',

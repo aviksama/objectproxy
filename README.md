@@ -8,6 +8,10 @@ This readme attempts to explain the general use of this library.
 ```
 pip install git+https://github.com/aviksama/objectproxy.git
 ```
+* Install from pypi
+```
+pip install object-proxy
+```
 ### Example ###
 
 Object proxy basically creates a proxy for any python object:
