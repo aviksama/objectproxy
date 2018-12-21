@@ -8,7 +8,7 @@ with open(os.path.join(here, 'README.md')) as f:
 
 
 setup(name='object-proxy',
-      version='0.1a',
+      version='0.1a1',
       description='A minimalistic yet powerful object proxying utility',
       long_description=README + '\n',
       classifiers=[
