@@ -1,6 +1,9 @@
 # ObjectProxy #
 **A minimalistic yet powerful object proxying utility**
 
+[![](https://img.shields.io/github/license/aviksama/objectproxy.svg?style=plastic)](https://github.com/aviksama/objectproxy/blob/master/LICENSE)
+[![](https://img.shields.io/badge/pypi-object--proxy-blue.svg?style=plastic)](https://pypi.org/project/object-proxy/)
+
 This readme attempts to explain the general use of this library.
 
 ### Installation ###
@@ -33,6 +36,7 @@ def create_dictionary_of_objects(*args):
     mydict = dict()
     for index, arg in enumerate(args):
         mydict[index] = arg
+    return mydict
 
 ```
 Now lets create proxies for the objects above in random fashion
@@ -42,7 +46,7 @@ Now lets create proxies for the objects above in random fashion
 
 >>> class_proxy = ProxyElement(MyClass, args=[[1,2,3],], kwargs={})
 >>> function_proxy = ProxyElement(create_dictionary_of_objects, args=[class_proxy], kwargs={})
->>> class_proxy_ref = function_proxy.values()[0]
+>>> class_proxy_ref = function_proxy[0]
 >>> class_proxy_array_element = class_proxy_ref.get_array_element(0)
 >>> eval_proxy(class_proxy_array_element)
 1
